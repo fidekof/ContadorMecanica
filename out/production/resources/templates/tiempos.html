@@ -24,13 +24,13 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="tiempo: ${tiempos}">
-            <td th:text="${tiempo.orden_id}"></td>
-            <td th:text="${tiempo.tarea_id}"></td>
-            <td th:text="${tiempo.hora_inicio}"></td>
-            <td th:text="${tiempo.hora_fin}"></td>
-            <td th:text="${tiempo.usuario_id}"></td>
-            <td th:text="${tiempo.bahia_id}"></td>
+        <tr th:each="tiempo: ${listatiempos}">
+            <td th:text="${tiempo.ordenId}"></td>
+            <td th:text="${tiempo.tareaId}"></td>
+            <td th:text="${tiempo.horaInicio}"></td>
+            <td th:text="${tiempo.horaFin}"></td>
+            <td th:text="${tiempo.usuarioId}"></td>
+            <td th:text="${tiempo.bahiaId}"></td>
             <td th:text="${tiempo.cronometro}"></td>
             <td th:text="${tiempo.motivo}"></td>
             <td th:text="${tiempo.procesada}"></td>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ferstl:spring-jdbc-oracle-ojdbc:2.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ferstl/spring-jdbc-oracle-ojdbc/2.0.0/48eb4fd22626ea571208694d069b87c397049c4d/spring-jdbc-oracle-ojdbc-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ferstl/spring-jdbc-oracle-ojdbc/2.0.0/983bb75d1b18e98be9ed78f2a1f1480aa8f27b56/spring-jdbc-oracle-ojdbc-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

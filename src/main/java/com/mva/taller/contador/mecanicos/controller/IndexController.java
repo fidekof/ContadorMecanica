@@ -13,8 +13,8 @@ public class IndexController {
 
     @GetMapping("/bodega_bahia/{bodega}/{bahia}")
     public String cronometro(Model model,  @PathVariable String bodega, @PathVariable String bahia){
-        model.addAttribute("taller","La bodega es!" + bodega);
-        model.addAttribute("bahia1","La bahia es!" + bahia);
+//        model.addAttribute("taller","La bodega es!" + bodega);
+//        model.addAttribute("bahia1","La bahia es!" + bahia);
         return "cronometro";
     }
 
