@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title th:text="${titulo}">Insert title here</title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+<table>
+    <thead>
+    <tr>
+        <th>Código Orden</th>
+        <th>Código Tarea</th>
+        <th>Hora Inicio</th>
+        <th>Hora Fin</th>
+        <th>Código Usuario</th>
+        <th>Código Bahia</th>
+        <th>Cronómetro</th>
+        <th>Motivo</th>
+        <th>Procesada</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="tiempo: ${tiempos}">
+            <td th:text="${tiempo.orden_id}"></td>
+            <td th:text="${tiempo.tarea_id}"></td>
+            <td th:text="${tiempo.hora_inicio}"></td>
+            <td th:text="${tiempo.hora_fin}"></td>
+            <td th:text="${tiempo.usuario_id}"></td>
+            <td th:text="${tiempo.bahia_id}"></td>
+            <td th:text="${tiempo.cronometro}"></td>
+            <td th:text="${tiempo.motivo}"></td>
+            <td th:text="${tiempo.procesada}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
