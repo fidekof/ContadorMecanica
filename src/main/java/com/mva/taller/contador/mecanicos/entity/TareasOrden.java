@@ -3,18 +3,19 @@ package com.mva.taller.contador.mecanicos.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name="productividad.prod_tareas_orden")
+@Table(name="prod_tareas_orden", schema = "productividad")
 public class TareasOrden implements Serializable {
 
-    private static final long SerialVersionUID = 1L;
-
+    @Id
     @Column(name = "ORDEN_ID")
     private Integer ordenId;
 
+    @Id
     @Column(name = "TAREA_ID")
     private String tareaId;
 

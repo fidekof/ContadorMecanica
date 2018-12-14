@@ -5,21 +5,23 @@ import javassist.SerialVersionUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name="productividad.prod_tiempos")
+@Table(name="prod_tiempos", schema = "productividad")
 public class Tiempos implements Serializable{
 
-    private static final long SerialVersionUID = 1L;
-
+    @Id
     @Column(name = "BAHIA_ID")
     private String bahiaId;
 
+    @Id
     @Column(name = "CRONOMETRO")
     private String cronometro;
 
+    @Id
     @Column(name = "HORA_INICIO")
     private String horaInicio;
 
