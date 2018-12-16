@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class TareasOrden {
 
     @EmbeddedId
-    TareasOrdenId tareasOrdenId;
+    private TareasOrdenId tareasOrdenId;
 
 
     @Column(name = "DESCRIPCION")

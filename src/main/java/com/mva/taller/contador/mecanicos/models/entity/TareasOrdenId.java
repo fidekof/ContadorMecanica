@@ -8,7 +8,6 @@ import javax.validation.constraints.Size;
 
 @Embeddable
 public class TareasOrdenId implements Serializable{
-
     private static final long serialVersionUID = 1L;
     @Column(name = "ORDEN_ID")
     private Integer ordenId;
@@ -17,11 +16,12 @@ public class TareasOrdenId implements Serializable{
     @Size(max = 30)
     private String tareaId;
 
-    public TareasOrdenId() {}
-
-    public TareasOrdenId(Integer ordenId, String tareaId) {
+    public TareasOrdenId(Integer ordenId, @Size(max = 30) String tareaId) {
         this.ordenId = ordenId;
         this.tareaId = tareaId;
+    }
+
+    public TareasOrdenId() {
     }
 
     public Integer getOrdenId() {
