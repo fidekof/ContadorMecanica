@@ -1,37 +1,22 @@
 package com.mva.taller.contador.mecanicos.models.entity;
 
+import java.util.Map;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name="prod_tiempos", schema = "productividad")
-public class Tiempos{
-    @EmbeddedId
-    private TiemposId tiemposId;
-
-    @Column(name = "HORA_FIN")
-    private String horaFin;
-
-    @Column(name = "USUARIO_ID")
-    private String usuarioId;
-
-    @Column(name = "BAHIA_ID")
-    private String bahiaId;
-
-    @Column(name = "CRONOMETRO")
+public class Tiempos {
+    private String ordenId = "";
+    private String tareaId = "";
+    private String horaInicio = "";
+    private String horaFin = null ;
+    private String usuarioId = null;
+    private String bahiaId = null;
     private String cronometro;
-
-    @Column(name = "MOTIVO")
     private String motivo;
-
-    @Column(name = "PROCESADA")
     private String procesada;
 
-    public Tiempos() {
-    }
-
-    public Tiempos(TiemposId tiemposId, String horaFin, String usuarioId, String bahiaId, String cronometro, String motivo, String procesada) {
-        this.tiemposId = tiemposId;
+    public Tiempos(String ordenId, String tareaId, String horaInicio, String horaFin, String usuarioId, String bahiaId, String cronometro, String motivo, String procesada) {
+        this.ordenId = ordenId;
+        this.tareaId = tareaId;
+        this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.usuarioId = usuarioId;
         this.bahiaId = bahiaId;
@@ -40,13 +25,31 @@ public class Tiempos{
         this.procesada = procesada;
     }
 
-
-    public TiemposId getTiemposId() {
-        return tiemposId;
+    public Tiempos() {
     }
 
-    public void setTiemposId(TiemposId tiemposId) {
-        this.tiemposId = tiemposId;
+    public String getOrdenId() {
+        return ordenId;
+    }
+
+    public void setOrdenId(String ordenId) {
+        this.ordenId = ordenId;
+    }
+
+    public String getTareaId() {
+        return tareaId;
+    }
+
+    public void setTareaId(String tareaId) {
+        this.tareaId = tareaId;
+    }
+
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
     }
 
     public String getHoraFin() {
@@ -96,4 +99,7 @@ public class Tiempos{
     public void setProcesada(String procesada) {
         this.procesada = procesada;
     }
+
+
+
 }

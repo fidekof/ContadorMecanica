@@ -1,5 +1,10 @@
+let clock;
+let clock2;
 
-var clock;
+const ConsultarOrdenPorBahia = (bahia, taller)
+{
+
+}
 
 $(document).ready(function () {
 
@@ -7,15 +12,11 @@ $(document).ready(function () {
         countdown: true,
         clockFace: 'MinuteCounter'
     });
-});
-
-var clock2;
-
-$(document).ready(function () {
 
     clock2 = $('.clock-bahia2').FlipClock(2100, {
         countdown: true,
         clockFace: 'MinuteCounter'
     });
 });
+
 
