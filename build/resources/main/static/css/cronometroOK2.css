@@ -1,0 +1,20 @@
+:root
+{
+    --COLOROKB2: hsla(120,100%,25%,1);
+    --BACKGROUNDOKB2: hsla(120,100%,50%,1);
+}
+
+.div-reloj2 .flip-clock-divider .flip-clock-label{
+    color: var(--COLOROKB2);
+}
+
+.clock-bahia2
+{
+    background-color: var(--BACKGROUNDOKB2);
+}
+
+.div-reloj2 .flip-clock-wrapper ul li a div div.inn{
+    color: var(--COLOROKB2);
+}
+
+

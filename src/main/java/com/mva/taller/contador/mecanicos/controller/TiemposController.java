@@ -34,8 +34,28 @@ public class TiemposController {
                 " AND NVL(TRIM(T.USUARIO_ID),'XXXXXXXXXX') = NVL(TRIM(U.USUARIO_ID),'XXXXXXXXXX') " +
                 " AND NVL(TRIM(PO.TIPO),'XXXXXXXXXX') = 'SH' " +
                 " AND NVL(TRIM(PO.BODEGA),'XXXXXXXXXX') LIKE '%"+taller+"%' " +
+               " AND NVL(TRIM(O.DESCRIPCION),'XXXXXXXXXX') = 'COMBO 2' " +
+              " AND T.BAHIA_ID = '"+bahia+"'";
+
+        List<Map<String, Object>> tiemposListMap = JdbcTemplate.queryForList(sql);
+        return WorkOrder.MapToTiempos(tiemposListMap);
+    }
+
+    @GetMapping(value = "/byOrdenId/{taller}/{bahia}/{orden}", produces = "application/json")
+    public ArrayList<WorkOrder> getTiemposByOrdenId(@PathVariable String taller, @PathVariable String bahia, @PathVariable String orden){
+        ArrayList<WorkOrder> tiemposList = null;
+        String sql =" SELECT DISTINCT O.ORDEN_ID, T.BAHIA_ID, U.NOMBRE, PO.TALLER, PO.BODEGA, O.DESCRIPCION " +
+                " FROM PRODUCTIVIDAD.PROD_TAREAS_ORDEN O, PRODUCTIVIDAD.PROD_TIEMPOS T, PRODUCTIVIDAD.PROD_USUARIOS U, PRODUCTIVIDAD.PROD_ORDEN PO " +
+                " WHERE " +
+                " NVL(TRIM(O.ORDEN_ID),'XXXXX') = NVL(TRIM(PO.ORDEN_ID),'XXXXX') " +
+                " AND NVL(TRIM(T.ORDEN_ID),'XXXXX') = NVL(TRIM(O.ORDEN_ID),'XXXXX') " +
+                " AND NVL(TRIM(O.ESTADO),'T') != 'T' " +
+                " AND NVL(TRIM(T.USUARIO_ID),'XXXXXXXXXX') = NVL(TRIM(U.USUARIO_ID),'XXXXXXXXXX') " +
+                " AND NVL(TRIM(PO.TIPO),'XXXXXXXXXX') = 'SH' " +
+                " AND NVL(TRIM(PO.BODEGA),'XXXXXXXXXX') LIKE '%"+taller+"%' " +
                 " AND NVL(TRIM(O.DESCRIPCION),'XXXXXXXXXX') = 'COMBO 2' " +
-                " -- AND T.BAHIA_ID = '"+bahia+"'";
+                " AND T.BAHIA_ID = '"+bahia+"' " +
+                " AND NVL(TRIM(O.ORDEN_ID),'XXXXX') = '"+orden+"'";
         List<Map<String, Object>> tiemposListMap = JdbcTemplate.queryForList(sql);
         return WorkOrder.MapToTiempos(tiemposListMap);
     }

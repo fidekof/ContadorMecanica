@@ -1,0 +1,18 @@
+:root
+{
+    --COLORERRORB1: hsla(0,100%,50%,1);
+    --BACKGROUNDERRORB1: hsla(0,100%,75%,1);
+}
+
+.div-reloj1 .flip-clock-divider .flip-clock-label{
+    color: var(--COLORERRORB1);
+}
+
+.clock-bahia1
+{
+    background-color: var(--BACKGROUNDERRORB1);
+}
+
+.div-reloj1 .flip-clock-wrapper ul li a div div.inn{
+    color: var(--COLORERRORB1);
+}

@@ -6,7 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" th:href="@{/css/flipclock.css}"/>
-    <link rel="stylesheet" th:href="@{/css/cronometro.css}"/>
+    <link rel="stylesheet"  id="crono-css" th:href="@{/css/cronometro.css}"/>
+    <link rel="stylesheet" id="css-theme1" th:href="@{/css/cronometroOK1.css}"/>
+    <link rel="stylesheet" id="css-theme2" th:href="@{/css/cronometroOK2.css}"/>
     <title>Rally Combo 2</title>
 </head>
 
@@ -14,17 +16,29 @@
 <div class="container">
     <div class="div-title"><p class="p-title">Rally Combo 2 - Serie 300</p></div>
         <div class="div-reloj1">
-            <div class="container-reloj1"> <div class="clock-bahia1"></div>
+            <div class="container-reloj1">
+                <div class="bahia-clock-name bahia-clock1-name">
+                    <p class="p-bahia-name p-bahia-name-clock1"></p>
+                </div>
+                <div class="clock-signo clock-signo1"></div>
+                <div class="clock-bahia1"></div>
                 <div class="message"></div></div>
         </div>
     <div class="div-reloj2">
-        <div class="container-reloj2"><div class="clock-bahia2"></div>
-        <div class="message"></div></div>
+        <div class="container-reloj2">
+            <div class="bahia-clock-name bahia-clock2-name">
+                <p class="p-bahia-name p-bahia-name-clock2"></p>
+            </div>
+            <div class="clock-signo clock-signo2"></div>
+            <div class="clock-bahia2"></div>
+            <div class="message"></div>
+        </div>
     </div>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script th:src="@{/js/flipclock.js}"></script>
+<script th:src="@{/js/AjaxLibrary.js}" id="scrip-ajax-library"></script>
 <script th:src="@{/js/cronometro.js}"></script>
 
 </body>
