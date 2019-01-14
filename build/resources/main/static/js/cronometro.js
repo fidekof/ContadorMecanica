@@ -6,7 +6,7 @@ let ordenActualBahia1G = '0';
 let ordenActualBahia2G = '0';
 const BAHIA1_CLASS_G = 'p-bahia-name-clock1' , BAHIA2_CLASS_G = 'p-bahia-name-clock2';
 const URLCOLOROK = 'cronometroOK',URLCOLORALERT = 'cronometroALERT',  URLCOLORERROR = 'cronometroERROR';
-const TIMEOKG = 300, MAXBAHIASG = 2, TIME35G=2100, TIME25G=1500, TIME35GP = 6*60, TIME25GP = 5*60 ;
+const TIMEOKG = 300, MAXBAHIASG = 2, TIME35G=2100, TIME25G=1500, TIME35GP = 7*60, TIME25GP = 6*60 ;
 let  canonicalURLG = '';
 const timeByOrder = ntares => (ntares>1)?TIME35GP:TIME25GP;
 const getBahiaCode = nBahia => (nBahia === 1)?bahia1G:bahia2G;

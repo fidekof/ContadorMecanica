@@ -6,6 +6,7 @@ class AjaxLibrary {
             method: 'GET',
             url: '',
             asn: true,
+            header: '',
             render: AjaxLibrary.TEXT_RESULT
         };
     }
@@ -50,6 +51,5 @@ class AjaxLibrary {
             }
         }
         return result;
-
     }
 }
